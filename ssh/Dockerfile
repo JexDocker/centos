@@ -26,7 +26,6 @@ RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
 
 RUN mkdir /var/run/sshd
 
-# VOLUME /var/lib/mysql
 COPY docker-entrypoint.sh /docker-entrypoint/ssh-entrypoint.sh
 RUN chmod -v +x /docker-entrypoint/ssh-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint/ssh-entrypoint.sh"]
